@@ -27,6 +27,7 @@ Unfortunately I'm a bad designer.
 -  Round Buttons
 -  DataBind to ListBox (bind  ObservableCollection<string>)
 -  Calculate hash for files
+-  File Open Dialog (File Select Dialog) from Avalon package
 
 ## System Requirements:
 -  Windows 7 or high
