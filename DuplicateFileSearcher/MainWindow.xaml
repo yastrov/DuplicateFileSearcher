@@ -83,6 +83,7 @@
                      ToolTip="Process files only with this extention"
                      VerticalContentAlignment="Center"
                      IsEnabled="{Binding ParamsCanBeChanged}"
+                     Style="{StaticResource myShadowedTextBox}"
                      MinWidth="40"/>
             <Label Content="Skip files less than:"
                    VerticalContentAlignment="Center"
@@ -91,6 +92,7 @@
                      ToolTip="Skip files less than"
                      VerticalContentAlignment="Center"
                      IsEnabled="{Binding ParamsCanBeChanged}"
+                     Style="{StaticResource myShadowedTextBox}"
                      Margin="1,0,1,0"
                      MinWidth="40"/>
             <ComboBox IsEnabled="{Binding ParamsCanBeChanged}"

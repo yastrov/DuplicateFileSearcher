@@ -26,6 +26,32 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" Direction="320"  
+                                        ShadowDepth="5" Opacity="0.5"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <!-- When the Button is pressed, apply the drop shadow. -->
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property="Effect" >
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black" Direction="330"  
+               ShadowDepth="2" Opacity="0.5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black" Direction="325"  
+               ShadowDepth="5" Opacity="0.5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         
         <Style x:Key="myFontStyle">
@@ -38,12 +64,32 @@
             <Setter Property="MinWidth" Value="10"/>
             <Setter Property="Margin" Value="2,5"/>
             <Setter Property="Padding" Value="5,5" />
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="5" BlurRadius="10" Direction="325"/>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style x:Key="marginComboBoxStyle" TargetType="{x:Type ComboBox}">
             <Setter Property="MaxHeight" Value="40"/>
             <Setter Property="MinWidth" Value="10"/>
             <Setter Property="Margin" Value="2,5"/>
             <Setter Property="Padding" Value="5,5" />
+            <Setter Property="Effect" >
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="5" BlurRadius="10" Direction="325"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="myShadowedTextBox" TargetType="TextBox">
+            <Setter Property="Margin" Value="1,1,1,1" />
+            <Setter Property="BorderThickness" Value="0,2,0,2"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="4" BlurRadius="10"/>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <Style TargetType="{x:Type DataGrid}">
