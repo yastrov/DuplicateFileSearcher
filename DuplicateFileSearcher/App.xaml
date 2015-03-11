@@ -1,0 +1,64 @@
+﻿<Application x:Class="DuplicateFileSearcher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DuplicateFileSearcher"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <local:ShorterPathConverter x:Key="SPConverter"/>
+        <local:FileSizeConverter x:Key="FSConverter"/>
+        <local:DoubleToStringConverter x:Key="DSConverter"/>
+        <Color x:Key="MyColor">#FF6071AC</Color>
+        <Style x:Key="RoundButton" TargetType="Button">
+            <Setter Property="Margin" Value="1,1,1,1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Width="40" Height="40" Stroke="#FF000000" StrokeThickness="1" Canvas.Left="141" Canvas.Top="61"
+                                     Fill="{TemplateBinding Background}">
+                                <!--<Ellipse.Fill>
+                                    <SolidColorBrush Color="{StaticResource MyColor}" />
+                                </Ellipse.Fill>-->
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="myFontStyle">
+            <Setter Property="Control.FontFamily" Value="Calibri"></Setter>
+            <Setter Property="Control.FontSize" Value="14"></Setter>
+            <Setter Property="Control.Padding" Value="5"></Setter>
+            <Setter Property="Control.Margin" Value="5"></Setter>
+        </Style>
+        <Style x:Key="marginButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="MinWidth" Value="10"/>
+            <Setter Property="Margin" Value="2,5"/>
+            <Setter Property="Padding" Value="5,5" />
+        </Style>
+        <Style x:Key="marginComboBoxStyle" TargetType="{x:Type ComboBox}">
+            <Setter Property="MaxHeight" Value="40"/>
+            <Setter Property="MinWidth" Value="10"/>
+            <Setter Property="Margin" Value="2,5"/>
+            <Setter Property="Padding" Value="5,5" />
+        </Style>
+
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="AlternationCount" Value="2" />
+        </Style>
+        <Style TargetType="{x:Type DataGridRow}">
+            <Style.Triggers>
+                <Trigger Property="AlternationIndex" Value="1" >
+                    <Setter Property="Background" Value="LightBlue"/>
+                </Trigger>
+                <Trigger Property="AlternationIndex" Value="0" >
+                    <Setter Property="Background" Value="White" />
+                </Trigger>
+                </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>
